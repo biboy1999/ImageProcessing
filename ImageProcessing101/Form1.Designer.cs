@@ -45,18 +45,21 @@
             System.Windows.Forms.Label label11;
             System.Windows.Forms.Panel panel3;
             System.Windows.Forms.Panel panel4;
+            System.Windows.Forms.Label label14;
             System.Windows.Forms.Panel panel5;
             System.Windows.Forms.Panel panel6;
             System.Windows.Forms.Panel panel7;
-            System.Windows.Forms.Label label14;
+            System.Windows.Forms.Label label15;
             this.btnDarken = new System.Windows.Forms.Button();
             this.btnBrighten = new System.Windows.Forms.Button();
             this.btnThresOtsu = new System.Windows.Forms.Button();
             this.btnGrayMaxium = new System.Windows.Forms.Button();
             this.btnGrayMeanValue = new System.Windows.Forms.Button();
             this.btnGrayMeanWeight = new System.Windows.Forms.Button();
+            this.btnSegKMean = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtKValue = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnOpenImage = new System.Windows.Forms.Button();
             this.btnSaveImage = new System.Windows.Forms.Button();
             this.picOriginal = new System.Windows.Forms.PictureBox();
@@ -76,8 +79,14 @@
             this.txtReWidth = new System.Windows.Forms.TextBox();
             this.txtReHeight = new System.Windows.Forms.TextBox();
             this.btnResize = new System.Windows.Forms.Button();
-            this.btnSegKMean = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSharpening = new System.Windows.Forms.Button();
+            this.btnNegative = new System.Windows.Forms.Button();
+            this.btnLagarithmic = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -95,13 +104,15 @@
             label11 = new System.Windows.Forms.Label();
             panel3 = new System.Windows.Forms.Panel();
             panel4 = new System.Windows.Forms.Panel();
+            label14 = new System.Windows.Forms.Label();
             panel5 = new System.Windows.Forms.Panel();
             panel6 = new System.Windows.Forms.Panel();
             panel7 = new System.Windows.Forms.Panel();
-            label14 = new System.Windows.Forms.Label();
+            label15 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalG)).BeginInit();
@@ -287,6 +298,15 @@
             panel2.Size = new System.Drawing.Size(261, 141);
             panel2.TabIndex = 31;
             // 
+            // btnSegKMean
+            // 
+            this.btnSegKMean.Location = new System.Drawing.Point(16, 105);
+            this.btnSegKMean.Name = "btnSegKMean";
+            this.btnSegKMean.Size = new System.Drawing.Size(75, 23);
+            this.btnSegKMean.TabIndex = 43;
+            this.btnSegKMean.Text = "K Means";
+            this.btnSegKMean.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(99, 66);
@@ -339,12 +359,33 @@
             // panel4
             // 
             panel4.BackColor = System.Drawing.Color.LemonChiffon;
+            panel4.Controls.Add(this.btnLagarithmic);
+            panel4.Controls.Add(this.btnNegative);
+            panel4.Controls.Add(this.btnSharpening);
             panel4.Controls.Add(this.button1);
             panel4.Controls.Add(label14);
             panel4.Location = new System.Drawing.Point(901, 347);
             panel4.Name = "panel4";
             panel4.Size = new System.Drawing.Size(261, 141);
             panel4.TabIndex = 32;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(14, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Histogram equalization";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(12, 12);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(44, 12);
+            label14.TabIndex = 26;
+            label14.Text = "Contrast";
             // 
             // panel5
             // 
@@ -357,6 +398,12 @@
             // panel6
             // 
             panel6.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            panel6.Controls.Add(this.button6);
+            panel6.Controls.Add(this.button5);
+            panel6.Controls.Add(this.button4);
+            panel6.Controls.Add(this.button3);
+            panel6.Controls.Add(this.button2);
+            panel6.Controls.Add(label15);
             panel6.Location = new System.Drawing.Point(901, 494);
             panel6.Name = "panel6";
             panel6.Size = new System.Drawing.Size(261, 141);
@@ -378,6 +425,7 @@
             this.btnOpenImage.TabIndex = 0;
             this.btnOpenImage.Text = "Open Image";
             this.btnOpenImage.UseVisualStyleBackColor = true;
+            this.btnOpenImage.Click += new System.EventHandler(this.btnOpenImage_Click);
             // 
             // btnSaveImage
             // 
@@ -387,6 +435,7 @@
             this.btnSaveImage.TabIndex = 1;
             this.btnSaveImage.Text = "Save Image";
             this.btnSaveImage.UseVisualStyleBackColor = true;
+            this.btnSaveImage.Click += new System.EventHandler(this.btnSaveImage_Click);
             // 
             // picOriginal
             // 
@@ -394,6 +443,7 @@
             this.picOriginal.Location = new System.Drawing.Point(31, 113);
             this.picOriginal.Name = "picOriginal";
             this.picOriginal.Size = new System.Drawing.Size(400, 400);
+            this.picOriginal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picOriginal.TabIndex = 3;
             this.picOriginal.TabStop = false;
             // 
@@ -475,6 +525,7 @@
             this.picResult.Location = new System.Drawing.Point(477, 113);
             this.picResult.Name = "picResult";
             this.picResult.Size = new System.Drawing.Size(400, 400);
+            this.picResult.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picResult.TabIndex = 13;
             this.picResult.TabStop = false;
             // 
@@ -536,32 +587,86 @@
             this.btnResize.Text = "Resize";
             this.btnResize.UseVisualStyleBackColor = true;
             // 
-            // btnSegKMean
+            // btnSharpening
             // 
-            this.btnSegKMean.Location = new System.Drawing.Point(16, 105);
-            this.btnSegKMean.Name = "btnSegKMean";
-            this.btnSegKMean.Size = new System.Drawing.Size(75, 23);
-            this.btnSegKMean.TabIndex = 43;
-            this.btnSegKMean.Text = "K Means";
-            this.btnSegKMean.UseVisualStyleBackColor = true;
+            this.btnSharpening.Location = new System.Drawing.Point(14, 68);
+            this.btnSharpening.Name = "btnSharpening";
+            this.btnSharpening.Size = new System.Drawing.Size(75, 23);
+            this.btnSharpening.TabIndex = 43;
+            this.btnSharpening.Text = "Sharpening";
+            this.btnSharpening.UseVisualStyleBackColor = true;
             // 
-            // label14
+            // btnNegative
             // 
-            label14.AutoSize = true;
-            label14.Location = new System.Drawing.Point(12, 12);
-            label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(44, 12);
-            label14.TabIndex = 26;
-            label14.Text = "Contrast";
+            this.btnNegative.Location = new System.Drawing.Point(95, 68);
+            this.btnNegative.Name = "btnNegative";
+            this.btnNegative.Size = new System.Drawing.Size(75, 23);
+            this.btnNegative.TabIndex = 44;
+            this.btnNegative.Text = "Negative";
+            this.btnNegative.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnLagarithmic
             // 
-            this.button1.Location = new System.Drawing.Point(14, 27);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 23);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "Histogram equalization";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLagarithmic.Location = new System.Drawing.Point(176, 68);
+            this.btnLagarithmic.Name = "btnLagarithmic";
+            this.btnLagarithmic.Size = new System.Drawing.Size(75, 23);
+            this.btnLagarithmic.TabIndex = 45;
+            this.btnLagarithmic.Text = "Logarithmic";
+            this.btnLagarithmic.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new System.Drawing.Point(12, 7);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(62, 12);
+            label15.TabIndex = 27;
+            label15.Text = "Space Filiter";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(14, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Median";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(95, 26);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 45;
+            this.button3.Text = "Mean";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(14, 55);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Sol";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(95, 55);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Sharpening";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(176, 55);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "Sharpening";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -609,6 +714,8 @@
             panel2.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalG)).EndInit();
@@ -653,6 +760,14 @@
         private System.Windows.Forms.TextBox txtKValue;
         private System.Windows.Forms.Button btnSegKMean;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLagarithmic;
+        private System.Windows.Forms.Button btnNegative;
+        private System.Windows.Forms.Button btnSharpening;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
 
