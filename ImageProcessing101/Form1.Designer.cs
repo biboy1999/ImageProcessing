@@ -44,12 +44,16 @@
             System.Windows.Forms.Label label12;
             System.Windows.Forms.Label label11;
             System.Windows.Forms.Panel panel3;
+            System.Windows.Forms.Label label18;
+            System.Windows.Forms.Label label17;
             System.Windows.Forms.Panel panel4;
             System.Windows.Forms.Label label14;
             System.Windows.Forms.Panel panel5;
+            System.Windows.Forms.Label label19;
             System.Windows.Forms.Panel panel6;
-            System.Windows.Forms.Panel panel7;
             System.Windows.Forms.Label label15;
+            System.Windows.Forms.Panel panel7;
+            System.Windows.Forms.Label label16;
             this.btnDarken = new System.Windows.Forms.Button();
             this.btnBrighten = new System.Windows.Forms.Button();
             this.btnThresOtsu = new System.Windows.Forms.Button();
@@ -57,9 +61,27 @@
             this.btnGrayMeanValue = new System.Windows.Forms.Button();
             this.btnGrayMeanWeight = new System.Windows.Forms.Button();
             this.btnSegKMean = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtKValue = new System.Windows.Forms.TextBox();
+            this.txtSegIterationLvl = new System.Windows.Forms.TextBox();
+            this.txtSegKvalue = new System.Windows.Forms.TextBox();
+            this.btnComp8bitSilicing = new System.Windows.Forms.Button();
+            this.txtCompBit = new System.Windows.Forms.TextBox();
+            this.btnLagarithmic = new System.Windows.Forms.Button();
+            this.btnNegative = new System.Windows.Forms.Button();
+            this.btnSharpening = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnCryptClear = new System.Windows.Forms.Button();
+            this.btnCryptDecryption = new System.Windows.Forms.Button();
+            this.btnCryptEncryption = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnClosing = new System.Windows.Forms.Button();
+            this.btnOpening = new System.Windows.Forms.Button();
+            this.btnDilation = new System.Windows.Forms.Button();
+            this.btnErosion = new System.Windows.Forms.Button();
             this.btnOpenImage = new System.Windows.Forms.Button();
             this.btnSaveImage = new System.Windows.Forms.Button();
             this.picOriginal = new System.Windows.Forms.PictureBox();
@@ -79,14 +101,6 @@
             this.txtReWidth = new System.Windows.Forms.TextBox();
             this.txtReHeight = new System.Windows.Forms.TextBox();
             this.btnResize = new System.Windows.Forms.Button();
-            this.btnSharpening = new System.Windows.Forms.Button();
-            this.btnNegative = new System.Windows.Forms.Button();
-            this.btnLagarithmic = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
@@ -103,16 +117,23 @@
             label12 = new System.Windows.Forms.Label();
             label11 = new System.Windows.Forms.Label();
             panel3 = new System.Windows.Forms.Panel();
+            label18 = new System.Windows.Forms.Label();
+            label17 = new System.Windows.Forms.Label();
             panel4 = new System.Windows.Forms.Panel();
             label14 = new System.Windows.Forms.Label();
             panel5 = new System.Windows.Forms.Panel();
+            label19 = new System.Windows.Forms.Label();
             panel6 = new System.Windows.Forms.Panel();
-            panel7 = new System.Windows.Forms.Panel();
             label15 = new System.Windows.Forms.Label();
+            panel7 = new System.Windows.Forms.Panel();
+            label16 = new System.Windows.Forms.Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
             panel4.SuspendLayout();
+            panel5.SuspendLayout();
             panel6.SuspendLayout();
+            panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalG)).BeginInit();
@@ -224,15 +245,16 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label10.Location = new System.Drawing.Point(12, 97);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(54, 12);
+            label10.Size = new System.Drawing.Size(73, 17);
             label10.TabIndex = 40;
             label10.Text = "Brightness";
             // 
             // btnThresOtsu
             // 
-            this.btnThresOtsu.Location = new System.Drawing.Point(14, 71);
+            this.btnThresOtsu.Location = new System.Drawing.Point(14, 72);
             this.btnThresOtsu.Name = "btnThresOtsu";
             this.btnThresOtsu.Size = new System.Drawing.Size(90, 23);
             this.btnThresOtsu.TabIndex = 39;
@@ -242,15 +264,16 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(12, 56);
+            label9.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label9.Location = new System.Drawing.Point(12, 54);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(67, 12);
+            label9.Size = new System.Drawing.Size(90, 17);
             label9.TabIndex = 38;
             label9.Text = "Thresholding";
             // 
             // btnGrayMaxium
             // 
-            this.btnGrayMaxium.Location = new System.Drawing.Point(176, 27);
+            this.btnGrayMaxium.Location = new System.Drawing.Point(176, 29);
             this.btnGrayMaxium.Name = "btnGrayMaxium";
             this.btnGrayMaxium.Size = new System.Drawing.Size(75, 23);
             this.btnGrayMaxium.TabIndex = 37;
@@ -259,7 +282,7 @@
             // 
             // btnGrayMeanValue
             // 
-            this.btnGrayMeanValue.Location = new System.Drawing.Point(95, 27);
+            this.btnGrayMeanValue.Location = new System.Drawing.Point(95, 29);
             this.btnGrayMeanValue.Name = "btnGrayMeanValue";
             this.btnGrayMeanValue.Size = new System.Drawing.Size(75, 23);
             this.btnGrayMeanValue.TabIndex = 36;
@@ -268,7 +291,7 @@
             // 
             // btnGrayMeanWeight
             // 
-            this.btnGrayMeanWeight.Location = new System.Drawing.Point(14, 27);
+            this.btnGrayMeanWeight.Location = new System.Drawing.Point(14, 29);
             this.btnGrayMeanWeight.Name = "btnGrayMeanWeight";
             this.btnGrayMeanWeight.Size = new System.Drawing.Size(75, 23);
             this.btnGrayMeanWeight.TabIndex = 35;
@@ -278,9 +301,10 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label8.Location = new System.Drawing.Point(12, 12);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(50, 12);
+            label8.Size = new System.Drawing.Size(68, 17);
             label8.TabIndex = 25;
             label8.Text = "Grayscale";
             // 
@@ -288,9 +312,9 @@
             // 
             panel2.BackColor = System.Drawing.Color.LemonChiffon;
             panel2.Controls.Add(this.btnSegKMean);
-            panel2.Controls.Add(this.textBox1);
+            panel2.Controls.Add(this.txtSegIterationLvl);
             panel2.Controls.Add(label13);
-            panel2.Controls.Add(this.txtKValue);
+            panel2.Controls.Add(this.txtSegKvalue);
             panel2.Controls.Add(label12);
             panel2.Controls.Add(label11);
             panel2.Location = new System.Drawing.Point(1168, 200);
@@ -307,28 +331,28 @@
             this.btnSegKMean.Text = "K Means";
             this.btnSegKMean.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSegIterationLvl
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 30;
+            this.txtSegIterationLvl.Location = new System.Drawing.Point(99, 66);
+            this.txtSegIterationLvl.Name = "txtSegIterationLvl";
+            this.txtSegIterationLvl.Size = new System.Drawing.Size(100, 22);
+            this.txtSegIterationLvl.TabIndex = 30;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(14, 71);
+            label13.Location = new System.Drawing.Point(20, 72);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(79, 12);
+            label13.Size = new System.Drawing.Size(73, 12);
             label13.TabIndex = 29;
-            label13.Text = "Interation Level";
+            label13.Text = "Iteration Level";
             // 
-            // txtKValue
+            // txtSegKvalue
             // 
-            this.txtKValue.Location = new System.Drawing.Point(99, 38);
-            this.txtKValue.Name = "txtKValue";
-            this.txtKValue.Size = new System.Drawing.Size(100, 22);
-            this.txtKValue.TabIndex = 28;
+            this.txtSegKvalue.Location = new System.Drawing.Point(99, 38);
+            this.txtSegKvalue.Name = "txtSegKvalue";
+            this.txtSegKvalue.Size = new System.Drawing.Size(100, 22);
+            this.txtSegKvalue.TabIndex = 28;
             // 
             // label12
             // 
@@ -342,19 +366,59 @@
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label11.Location = new System.Drawing.Point(14, 12);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(68, 12);
+            label11.Size = new System.Drawing.Size(95, 17);
             label11.TabIndex = 26;
             label11.Text = "Segmentation";
             // 
             // panel3
             // 
             panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            panel3.Controls.Add(this.btnComp8bitSilicing);
+            panel3.Controls.Add(this.txtCompBit);
+            panel3.Controls.Add(label18);
+            panel3.Controls.Add(label17);
             panel3.Location = new System.Drawing.Point(1168, 347);
             panel3.Name = "panel3";
-            panel3.Size = new System.Drawing.Size(261, 141);
+            panel3.Size = new System.Drawing.Size(261, 111);
             panel3.TabIndex = 33;
+            // 
+            // btnComp8bitSilicing
+            // 
+            this.btnComp8bitSilicing.Location = new System.Drawing.Point(16, 68);
+            this.btnComp8bitSilicing.Name = "btnComp8bitSilicing";
+            this.btnComp8bitSilicing.Size = new System.Drawing.Size(228, 23);
+            this.btnComp8bitSilicing.TabIndex = 44;
+            this.btnComp8bitSilicing.Text = "8 Bit plane slicing";
+            this.btnComp8bitSilicing.UseVisualStyleBackColor = true;
+            // 
+            // txtCompBit
+            // 
+            this.txtCompBit.Location = new System.Drawing.Point(99, 36);
+            this.txtCompBit.Name = "txtCompBit";
+            this.txtCompBit.Size = new System.Drawing.Size(100, 22);
+            this.txtCompBit.TabIndex = 45;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new System.Drawing.Point(74, 42);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(19, 12);
+            label18.TabIndex = 44;
+            label18.Text = "Bit";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label17.Location = new System.Drawing.Point(14, 12);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(89, 17);
+            label17.TabIndex = 46;
+            label17.Text = "Compression";
             // 
             // panel4
             // 
@@ -369,6 +433,33 @@
             panel4.Size = new System.Drawing.Size(261, 141);
             panel4.TabIndex = 32;
             // 
+            // btnLagarithmic
+            // 
+            this.btnLagarithmic.Location = new System.Drawing.Point(176, 68);
+            this.btnLagarithmic.Name = "btnLagarithmic";
+            this.btnLagarithmic.Size = new System.Drawing.Size(75, 23);
+            this.btnLagarithmic.TabIndex = 45;
+            this.btnLagarithmic.Text = "Logarithmic";
+            this.btnLagarithmic.UseVisualStyleBackColor = true;
+            // 
+            // btnNegative
+            // 
+            this.btnNegative.Location = new System.Drawing.Point(95, 68);
+            this.btnNegative.Name = "btnNegative";
+            this.btnNegative.Size = new System.Drawing.Size(75, 23);
+            this.btnNegative.TabIndex = 44;
+            this.btnNegative.Text = "Negative";
+            this.btnNegative.UseVisualStyleBackColor = true;
+            // 
+            // btnSharpening
+            // 
+            this.btnSharpening.Location = new System.Drawing.Point(14, 68);
+            this.btnSharpening.Name = "btnSharpening";
+            this.btnSharpening.Size = new System.Drawing.Size(75, 23);
+            this.btnSharpening.TabIndex = 43;
+            this.btnSharpening.Text = "Sharpening";
+            this.btnSharpening.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(14, 34);
@@ -381,19 +472,70 @@
             // label14
             // 
             label14.AutoSize = true;
+            label14.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label14.Location = new System.Drawing.Point(12, 12);
             label14.Name = "label14";
-            label14.Size = new System.Drawing.Size(44, 12);
+            label14.Size = new System.Drawing.Size(61, 17);
             label14.TabIndex = 26;
             label14.Text = "Contrast";
             // 
             // panel5
             // 
             panel5.BackColor = System.Drawing.Color.LemonChiffon;
-            panel5.Location = new System.Drawing.Point(1168, 494);
+            panel5.Controls.Add(this.btnCryptClear);
+            panel5.Controls.Add(this.btnCryptDecryption);
+            panel5.Controls.Add(this.btnCryptEncryption);
+            panel5.Controls.Add(this.richTextBox2);
+            panel5.Controls.Add(label19);
+            panel5.Location = new System.Drawing.Point(1168, 464);
             panel5.Name = "panel5";
-            panel5.Size = new System.Drawing.Size(261, 141);
+            panel5.Size = new System.Drawing.Size(261, 171);
             panel5.TabIndex = 33;
+            // 
+            // btnCryptClear
+            // 
+            this.btnCryptClear.Location = new System.Drawing.Point(181, 6);
+            this.btnCryptClear.Name = "btnCryptClear";
+            this.btnCryptClear.Size = new System.Drawing.Size(63, 23);
+            this.btnCryptClear.TabIndex = 49;
+            this.btnCryptClear.Text = "Clear";
+            this.btnCryptClear.UseVisualStyleBackColor = true;
+            // 
+            // btnCryptDecryption
+            // 
+            this.btnCryptDecryption.Location = new System.Drawing.Point(131, 132);
+            this.btnCryptDecryption.Name = "btnCryptDecryption";
+            this.btnCryptDecryption.Size = new System.Drawing.Size(113, 23);
+            this.btnCryptDecryption.TabIndex = 48;
+            this.btnCryptDecryption.Text = "Decryption";
+            this.btnCryptDecryption.UseVisualStyleBackColor = true;
+            // 
+            // btnCryptEncryption
+            // 
+            this.btnCryptEncryption.Location = new System.Drawing.Point(16, 132);
+            this.btnCryptEncryption.Name = "btnCryptEncryption";
+            this.btnCryptEncryption.Size = new System.Drawing.Size(113, 23);
+            this.btnCryptEncryption.TabIndex = 47;
+            this.btnCryptEncryption.Text = "Encryption";
+            this.btnCryptEncryption.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(16, 32);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(228, 94);
+            this.richTextBox2.TabIndex = 35;
+            this.richTextBox2.Text = "";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label19.Location = new System.Drawing.Point(14, 11);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(161, 17);
+            label19.TabIndex = 47;
+            label19.Text = "Encryption && Decryption";
             // 
             // panel6
             // 
@@ -409,13 +551,119 @@
             panel6.Size = new System.Drawing.Size(261, 141);
             panel6.TabIndex = 32;
             // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(176, 59);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 48;
+            this.button6.Text = "Sharpening";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(95, 59);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Sharpening";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(14, 59);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Sol";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(95, 30);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 45;
+            this.button3.Text = "Mean";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(14, 30);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 44;
+            this.button2.Text = "Median";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label15.Location = new System.Drawing.Point(12, 11);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(84, 17);
+            label15.TabIndex = 27;
+            label15.Text = "Space Filiter";
+            // 
             // panel7
             // 
             panel7.BackColor = System.Drawing.Color.LemonChiffon;
+            panel7.Controls.Add(this.btnClosing);
+            panel7.Controls.Add(this.btnOpening);
+            panel7.Controls.Add(this.btnDilation);
+            panel7.Controls.Add(this.btnErosion);
+            panel7.Controls.Add(label16);
             panel7.Location = new System.Drawing.Point(901, 641);
             panel7.Name = "panel7";
             panel7.Size = new System.Drawing.Size(261, 141);
             panel7.TabIndex = 34;
+            // 
+            // btnClosing
+            // 
+            this.btnClosing.Location = new System.Drawing.Point(14, 68);
+            this.btnClosing.Name = "btnClosing";
+            this.btnClosing.Size = new System.Drawing.Size(75, 23);
+            this.btnClosing.TabIndex = 48;
+            this.btnClosing.Text = "Closing";
+            this.btnClosing.UseVisualStyleBackColor = true;
+            // 
+            // btnOpening
+            // 
+            this.btnOpening.Location = new System.Drawing.Point(176, 39);
+            this.btnOpening.Name = "btnOpening";
+            this.btnOpening.Size = new System.Drawing.Size(75, 23);
+            this.btnOpening.TabIndex = 47;
+            this.btnOpening.Text = "Opening";
+            this.btnOpening.UseVisualStyleBackColor = true;
+            // 
+            // btnDilation
+            // 
+            this.btnDilation.Location = new System.Drawing.Point(95, 39);
+            this.btnDilation.Name = "btnDilation";
+            this.btnDilation.Size = new System.Drawing.Size(75, 23);
+            this.btnDilation.TabIndex = 46;
+            this.btnDilation.Text = "Dilation";
+            this.btnDilation.UseVisualStyleBackColor = true;
+            // 
+            // btnErosion
+            // 
+            this.btnErosion.Location = new System.Drawing.Point(14, 39);
+            this.btnErosion.Name = "btnErosion";
+            this.btnErosion.Size = new System.Drawing.Size(75, 23);
+            this.btnErosion.TabIndex = 45;
+            this.btnErosion.Text = "Erosion";
+            this.btnErosion.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label16.Location = new System.Drawing.Point(12, 17);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(85, 17);
+            label16.TabIndex = 28;
+            label16.Text = "Morphology";
             // 
             // btnOpenImage
             // 
@@ -450,11 +698,11 @@
             // txtOriginalSize
             // 
             this.txtOriginalSize.AutoSize = true;
-            this.txtOriginalSize.Location = new System.Drawing.Point(397, 85);
+            this.txtOriginalSize.Location = new System.Drawing.Point(409, 85);
             this.txtOriginalSize.Name = "txtOriginalSize";
             this.txtOriginalSize.Size = new System.Drawing.Size(23, 12);
             this.txtOriginalSize.TabIndex = 4;
-            this.txtOriginalSize.Text = "0x0";
+            this.txtOriginalSize.Text = "0x1";
             // 
             // picOriginalR
             // 
@@ -587,87 +835,6 @@
             this.btnResize.Text = "Resize";
             this.btnResize.UseVisualStyleBackColor = true;
             // 
-            // btnSharpening
-            // 
-            this.btnSharpening.Location = new System.Drawing.Point(14, 68);
-            this.btnSharpening.Name = "btnSharpening";
-            this.btnSharpening.Size = new System.Drawing.Size(75, 23);
-            this.btnSharpening.TabIndex = 43;
-            this.btnSharpening.Text = "Sharpening";
-            this.btnSharpening.UseVisualStyleBackColor = true;
-            // 
-            // btnNegative
-            // 
-            this.btnNegative.Location = new System.Drawing.Point(95, 68);
-            this.btnNegative.Name = "btnNegative";
-            this.btnNegative.Size = new System.Drawing.Size(75, 23);
-            this.btnNegative.TabIndex = 44;
-            this.btnNegative.Text = "Negative";
-            this.btnNegative.UseVisualStyleBackColor = true;
-            // 
-            // btnLagarithmic
-            // 
-            this.btnLagarithmic.Location = new System.Drawing.Point(176, 68);
-            this.btnLagarithmic.Name = "btnLagarithmic";
-            this.btnLagarithmic.Size = new System.Drawing.Size(75, 23);
-            this.btnLagarithmic.TabIndex = 45;
-            this.btnLagarithmic.Text = "Logarithmic";
-            this.btnLagarithmic.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new System.Drawing.Point(12, 7);
-            label15.Name = "label15";
-            label15.Size = new System.Drawing.Size(62, 12);
-            label15.TabIndex = 27;
-            label15.Text = "Space Filiter";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(14, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 44;
-            this.button2.Text = "Median";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(95, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 45;
-            this.button3.Text = "Mean";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(14, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 46;
-            this.button4.Text = "Sol";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(95, 55);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 47;
-            this.button5.Text = "Sharpening";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(176, 55);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 48;
-            this.button6.Text = "Sharpening";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -707,15 +874,21 @@
             this.Controls.Add(this.btnSaveImage);
             this.Controls.Add(this.btnOpenImage);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ImageProcessing101";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOriginalG)).EndInit();
@@ -756,8 +929,8 @@
         private System.Windows.Forms.Button btnGrayMaxium;
         private System.Windows.Forms.Button btnGrayMeanValue;
         private System.Windows.Forms.Button btnGrayMeanWeight;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox txtKValue;
+        private System.Windows.Forms.TextBox txtSegIterationLvl;
+        private System.Windows.Forms.TextBox txtSegKvalue;
         private System.Windows.Forms.Button btnSegKMean;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnLagarithmic;
@@ -768,6 +941,16 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnComp8bitSilicing;
+        private System.Windows.Forms.TextBox txtCompBit;
+        private System.Windows.Forms.Button btnCryptClear;
+        private System.Windows.Forms.Button btnCryptDecryption;
+        private System.Windows.Forms.Button btnCryptEncryption;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button btnClosing;
+        private System.Windows.Forms.Button btnOpening;
+        private System.Windows.Forms.Button btnDilation;
+        private System.Windows.Forms.Button btnErosion;
     }
 }
 

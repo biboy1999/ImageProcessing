@@ -19,30 +19,41 @@ namespace ImageProcessing101
 
         private void btnOpenImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.RestoreDirectory = true;
-            ofd.Filter = "jpeg File (*.jpg) |*.jpg| All File (*.*) |*.*";
-            ofd.Title = "Open File";
-            ofd.Multiselect = false;
+            OpenFileDialog ofd = new OpenFileDialog
+            {
+                RestoreDirectory = true,
+                Filter = "Image File (*.jpg,*.bmp) |*.jpg;*.bmp| All File (*.*) |*.*",
+                Title = "Open File",
+                Multiselect = false
+            };
+
             if (ofd.ShowDialog() != DialogResult.OK)
             {
                 return;
             }
 
-            picOriginal.Load(ofd.FileName);
-            txtOriginalSize.Text = $"{picOriginal.Image.Size.Width}x{picOriginal.Image.Size.Height}";
+
+            //TODO: Refresh warpper
+
+            //picOriginal.Load(ofd.FileName);
+            //txtOriginalSize.Text = $"{picOriginal.Image.Size.Width}x{picOriginal.Image.Size.Height}";
+            //txtOriginalSize.Left = picOriginal.Right - txtOriginalSize.Width;
         }
 
         private void btnSaveImage_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.RestoreDirectory = true;
-            sfd.Filter = "jpeg File (*.jpg) |*.jpg| All File (*.*) |*.*";
-            sfd.Title = "Save File";
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                RestoreDirectory = true,
+                Filter = "jpeg File (*.jpg) |*.jpg| All File (*.*) |*.*",
+                Title = "Save File"
+            };
+
             if (sfd.ShowDialog() != DialogResult.OK)
             {
                 return;
             }
+
             picResult.Image.Save(sfd.FileName);
         }
     }
