@@ -603,6 +603,7 @@
             this.btnLagarithmic.TabIndex = 45;
             this.btnLagarithmic.Text = "Logarithmic";
             this.btnLagarithmic.UseVisualStyleBackColor = true;
+            this.btnLagarithmic.Click += new System.EventHandler(this.btnLagarithmic_Click);
             // 
             // btnNegative
             // 
@@ -612,6 +613,7 @@
             this.btnNegative.TabIndex = 44;
             this.btnNegative.Text = "Negative";
             this.btnNegative.UseVisualStyleBackColor = true;
+            this.btnNegative.Click += new System.EventHandler(this.btnNegative_Click);
             // 
             // btnSharpening
             // 

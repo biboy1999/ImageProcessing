@@ -79,8 +79,6 @@ namespace ImageProcessing101
 
         public static Tuple<Bitmap, Bitmap, Bitmap> Band(Bitmap _image)
         {
-
-
             Bitmap bandR = new Bitmap(_image.Size.Width, _image.Size.Height, PixelFormat.Format32bppArgb);
             Bitmap bandG = new Bitmap(_image.Size.Width, _image.Size.Height, PixelFormat.Format32bppArgb);
             Bitmap bandB = new Bitmap(_image.Size.Width, _image.Size.Height, PixelFormat.Format32bppArgb);

@@ -1,4 +1,5 @@
-﻿using ImageProcessing101.utils;
+﻿using ImageProcessing101.algorithm;
+using ImageProcessing101.utils;
 using System;
 using System.Drawing;
 using System.Threading.Tasks;
@@ -109,6 +110,28 @@ namespace ImageProcessing101
             pictureViewer2.Image = state.Image;
             await pictureViewer2.HistogramView();
             await pictureViewer2.GrayBandView();
+        }
+
+        private async void btnLagarithmic_Click(object sender, EventArgs e)
+        {
+            btnLagarithmic.Enabled = false;
+            Bitmap resultImg = await Task.Run(() => Contrast.Logarithmic(state.Image, 40));
+            state.Edit(resultImg);
+            pictureViewer2.Image = state.Image;
+            await pictureViewer2.HistogramView();
+            await pictureViewer2.GrayBandView();
+            btnLagarithmic.Enabled = true;
+        }
+
+        private async void btnNegative_Click(object sender, EventArgs e)
+        {
+            btnNegative.Enabled = false;
+            Bitmap resultImg = await Task.Run(() => Contrast.Negative(state.Image));
+            state.Edit(resultImg);
+            pictureViewer2.Image = state.Image;
+            await pictureViewer2.HistogramView();
+            await pictureViewer2.GrayBandView();
+            btnNegative.Enabled = true;
         }
     }
 }

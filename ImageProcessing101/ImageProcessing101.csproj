@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="algorithm\Contrast.cs" />
     <Compile Include="algorithm\Histogram.cs" />
     <Compile Include="algorithm\Graycale.cs" />
     <Compile Include="controls\PictureViewer.cs">
